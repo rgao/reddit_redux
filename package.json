@@ -1,0 +1,56 @@
+{
+  "name": "reddit_redux",
+  "version": "1.0.0",
+  "description": "\"Pseudo-remake of reddit with post scraper, commenting, and user authentication\"",
+  "main": "app.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:dev": "concurrently \"nodemon app.js --ignore client\" \"cd client && yarn start\"",
+    "start:prod": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgao/reddit_redux.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "if-env": "^1.0.4",
+    "morgan": "^1.9.1",
+    "pg": "^7.14.0",
+    "pg-hstore": "^2.3.3",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.12",
+    "react-dom": "^16.10.1",
+    "react-router-dom": "^5.1.1",
+    "react-scripts": "^3.1.2",
+    "sequelize": "^5.21.2",
+    "sequelize-cli": "^5.5.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "nodemon": "^2.0.1",
+    "node": "8.10.0"
+  },
+  "keywords": [
+    "full_stack",
+    "postgres",
+    "react",
+    "reactjs",
+    "express",
+    "node",
+    "nodejs",
+    "web_app",
+    "web_design",
+    "reddit"
+  ],
+  "author": "ryan gao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rgao/reddit_redux/issues"
+  },
+  "homepage": "https://github.com/rgao/reddit_redux#readme"
+}
