@@ -22,7 +22,6 @@ const client = new Client({
 
 client.connect();
 
-// require('./server/routes')(app);
 const routes = require("./server/routes/index.js");
 app.use(routes);
 
