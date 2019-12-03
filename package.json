@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "\"Pseudo-remake of reddit with post scraper, commenting, and user authentication\"",
   "main": "app.js",
+  "author": "ryan gao",
+  "license": "ISC",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:dev": "concurrently \"nodemon app.js --ignore client\" \"cd client && yarn start\"",
@@ -16,8 +18,13 @@
     "url": "git+https://github.com/rgao/reddit_redux.git"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.4.1",
+    "cheerio": "^1.0.0-rc.3",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "i": "^0.3.6",
     "if-env": "^1.0.4",
     "morgan": "^1.9.1",
     "pg": "^7.14.0",
@@ -47,8 +54,6 @@
     "web_design",
     "reddit"
   ],
-  "author": "ryan gao",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/rgao/reddit_redux/issues"
   },
