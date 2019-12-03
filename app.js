@@ -22,12 +22,13 @@ const client = new Client({
 
 client.connect();
 
-require('./server/routes')(app);
+// require('./server/routes')(app);
+const routes = require("./server/routes/index.js");
+app.use(routes);
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, function () {
   console.log(`API Server now listening on PORT ${PORT}!`);
 });
 
-module.exports = app;
